@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('partials/head.ejs') %>
+    <style>
+        body {
+            background-image: url("<%= image %>");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white;
+            text-shadow: 1px 1px 4px black;
+            min-height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <%- include('partials/nav.ejs') %>
+
+    <h1><%= title %></h1>
+    <p><%= explanation %></p>
+
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

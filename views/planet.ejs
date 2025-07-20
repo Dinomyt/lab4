@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('partials/head.ejs') %>
+</head>
+<body>
+    <%- include('partials/nav.ejs') %>
+
+    <h1><%= name %></h1>
+    <p><%= planet.description %></p>
+
+    <ul>
+        <li>Distance from Sun: <%= planet.distanceFromSun %></li>
+        <li>Year Length: <%= planet.yearLength %></li>
+        <li>Radius: <%= planet.radius %> miles</li>
+        <li>One Earth Day: <%= planet.oneEarthDay %></li>
+        <li>Moons: <%= planet.moons %></li>
+        <li><a href="<%= planet.websiteLink %>" target="_blank">More info</a></li>
+    </ul>
+
+    <img src="<%= planet.image %>" alt="<%= name %>" class="planet-image">
+
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>
