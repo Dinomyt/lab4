@@ -1,9 +1,6 @@
 import express from 'express';
 import fetch from 'node-fetch';
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
-
-const planets = require('./lib/solarSystem.js');
+import * as planets from './lib/solarSystem.js';
 
 const app = express();
 
@@ -69,11 +66,7 @@ app.get('/pluto', (req, res) => {
     res.render("planet", { planet: pluto, name: "Pluto" });
 });
 
-
-
-
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
 });
-
